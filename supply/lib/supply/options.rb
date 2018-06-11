@@ -202,8 +202,27 @@ module Supply
                                      optional: true,
                                      description: "Check the other tracks for superseded versions and disable them",
                                      is_string: false,
-                                     default_value: false)
-
+                                     default_value: false),
+        FastlaneCore::ConfigItem.new(key: :obb_main_references_version,
+                                     env_name: "OBB_MAIN_REFERENCES_VERSION",
+                                     description: "References version of 'main' expansion file",
+                                     optional: true,
+                                     type: Numeric),
+        FastlaneCore::ConfigItem.new(key: :obb_main_file_size,
+                                     env_name: "OBB_MAIN_FILE SIZE",
+                                     description: "Size of 'main' expansion file in bytes",
+                                     optional: true,
+                                     type: Numeric),
+        FastlaneCore::ConfigItem.new(key: :obb_patch_references_version,
+                                     env_name: "OBB_PATCH_REFERENCES_VERSION",
+                                     description: "References version of 'patch' expansion file",
+                                     optional: true,
+                                     type: Numeric),
+        FastlaneCore::ConfigItem.new(key: :obb_patch_file_size,
+                                     env_name: "OBB_PATCH_FILE SIZE",
+                                     description: "Size of 'patch' expansion file in bytes",
+                                     optional: true,
+                                     type: Numeric)
       ]
     end
     # rubocop:enable Metrics/PerceivedComplexity
